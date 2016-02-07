@@ -49,6 +49,9 @@ module.exports = function gulpConfig() {
   };
 
   var pipelines = {
+    validate: {
+      src: filesets.appJS
+    },
     less: {
       src: srcDir + 'styles/' + fileNames.less,
       watch: srcDir + 'styles/**/*.less',

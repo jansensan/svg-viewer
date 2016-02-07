@@ -17,7 +17,7 @@ gulp.task('dev', dev);
 function buildDev(done) {
   runSequence(
     'clean:template-cache',
-    // 'verify',
+    'validate',
     'clean:dev',
     'copy:dev-vendor-css',
     'copy:dev-vendor-js',
