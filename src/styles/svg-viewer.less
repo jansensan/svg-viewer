@@ -1,8 +1,23 @@
 @import "vendor/elements";
 @import "common/variables";
+@import "../components/header/header";
 
 html, body {
   background: @grey;
+  color: #fff;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: @lightestGrey;
+}
+
+a {
+  color: @activeBlue;
+  text-decoration: underline;
+
+  &:hover {
+    text-decoration: none;
+  }
 }
 
 button {

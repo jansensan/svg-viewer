@@ -16,7 +16,7 @@ function buildDevPages() {
     .pipe(glp.inject(
       gulp
         .src(config.src.scripts)
-        .pipe(glp.angularFilesort()), config.options.inject)
+        .pipe(glp.angularFilesort()), config.options.scripts)
     )
     // inject template cache in html
     .pipe(glp.inject(

@@ -114,6 +114,10 @@ module.exports = function gulpConfig() {
             }
           }
         },
+        scripts: {
+          ignorePath: '/src',
+          addPrefix: 'scripts/src'
+        },
         templateCache: {
           read: false,
           starttag: '<!-- inject:templates:js -->',

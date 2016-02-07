@@ -4,7 +4,7 @@ var config = require('../gulp-config')().less,
   watch = require('gulp-watch'),
   glp = require('gulp-load-plugins')({lazy: true});
 
-// tasks
+// tasks definitions
 gulp.task('less', compileLESS);
 gulp.task('less:watch', watchLESS);
 
