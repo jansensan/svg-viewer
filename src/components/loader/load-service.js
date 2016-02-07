@@ -12,7 +12,7 @@
   /* @ngInject */
   function LoaderService(canvasService) {
     // vars
-    var _input;
+    var _form, _input;
 
     // public api
     var _service = {
@@ -27,11 +27,13 @@
 
     // methods definitions
     function init() {
+      _form = $('#canvasLoaderForm')[0];
       _input = $('#loadInput');
       _input.on('change', onInputChanged);
     }
 
     function load() {
+      _form.reset();
       _input.click();
     }
 
