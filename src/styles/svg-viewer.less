@@ -2,8 +2,10 @@
 @import "common/variables";
 @import "../components/header/header";
 @import "../components/canvas/canvas";
+@import "../components/loader/loader";
 
 html, body {
+  position: relative;
   background: @grey;
   color: #fff;
 }
@@ -24,9 +26,14 @@ a {
 button {
   .rounded(16px);
   background: @grey;
-  border: 1px solid @lightGrey;
+  border: 1px solid #fff;
   min-height: 32px;
   min-width: 112px;
+  color: #fff;
+
+  &:hover {
+    background: @darkGrey;
+  }
 }
 
 .centered-content {

@@ -6,6 +6,7 @@
     .module('svgv.views.SVGViewer', [
       'svgv.components.Header',
       'svgv.components.Canvas',
+      'svgv.components.Loader',
       'svgv.components.References'
     ]);
 

@@ -10,6 +10,16 @@
     "normalize-css": "~3.0.3"
   },
   "devDependencies": {},
+  "overrides": {
+    "angular": {
+      "dependencies": {
+        "jquery": "~2.2.0"
+      }
+    },
+    "blueimp-load-image": {
+      "main": "js/load-image.js"
+    }
+  },
   "ignore": [
     "**/.*",
     "node_modules",
