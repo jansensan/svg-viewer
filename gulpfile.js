@@ -22,6 +22,8 @@ function buildDev(done) {
     'copy:dev-vendor-css',
     'copy:dev-vendor-js',
     'copy:dev-sources',
+    'less',
+    'less:watch',
     'build:svg-viewer',
     'clean:template-cache',
     done

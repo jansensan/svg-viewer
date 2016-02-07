@@ -1,8 +1,10 @@
 var bowerJson = require('./bower.json'),
+  packageJson = require('./package.json'),
   wiredep = require('wiredep');
 
 module.exports = function gulpConfig() {
-  var projectDir = process.env.PWD = process.cwd() + '/',
+  var projectName = packageJson.name,
+    projectDir = process.env.PWD = process.cwd() + '/',
     srcDir = 'src/',
     testDir = 'src/',
     devDir = '.dev/',
@@ -40,8 +42,18 @@ module.exports = function gulpConfig() {
       testDir + '**/*-spec.js'
     ]
   };
+  var fileNames = {
+    css: projectName + '.css',
+    less: projectName + '.less',
+    templates: projectName + '-templates.js'
+  };
 
   var pipelines = {
+    less: {
+      src: srcDir + 'styles/' + fileNames.less,
+      watch: srcDir + 'styles/**/*.less',
+      dest: devDir + 'styles/'
+    },
     copy: {
       src: {
         vendors: bowerFiles.dependencies,
@@ -69,7 +81,7 @@ module.exports = function gulpConfig() {
       dest: {
         dev: devDir + 'scripts/src'
       },
-      fileName: 'svg-viewer-templates.js',
+      fileName: fileNames.templates,
       opts: {
         module: 'svgv.Templates',
         root: '/',
@@ -80,7 +92,8 @@ module.exports = function gulpConfig() {
       src: {
         index: srcDir + 'index.html',
         scripts: filesets.appJS,
-        templateCacheDev: devDir + 'scripts/src/svg-viewer-templates.js'
+        templateCacheDev: devDir + 'scripts/src/' + fileNames.templates,
+        css: devDir + 'styles/' + fileNames.css
       },
       dest: devDir,
       options: {
@@ -98,13 +111,14 @@ module.exports = function gulpConfig() {
             }
           }
         },
-        inject: {
-          ignorePath: '/src',
-          addPrefix: 'scripts/src'
-        },
         templateCache: {
           read: false,
           starttag: '<!-- inject:templates:js -->',
+          ignorePath: '.dev/'
+        },
+        css: {
+          read: false,
+          starttag: '<!-- inject:css -->',
           ignorePath: '.dev/'
         }
       }

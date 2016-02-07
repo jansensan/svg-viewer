@@ -22,6 +22,10 @@ function buildDevPages() {
     .pipe(glp.inject(
       gulp.src(config.src.templateCacheDev), config.options.templateCache)
     )
+    // inject project css in html
+    .pipe(glp.inject(
+      gulp.src(config.src.css), config.options.css)
+    )
     // output file
     .pipe(gulp.dest(config.dest));
 }
