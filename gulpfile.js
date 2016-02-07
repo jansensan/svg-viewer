@@ -21,6 +21,7 @@ function buildDev(done) {
     'clean:dev',
     'copy:dev-vendor-css',
     'copy:dev-vendor-js',
+    'copy:dev-assets',
     'copy:dev-sources',
     'less',
     'less:watch',

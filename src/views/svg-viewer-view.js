@@ -5,6 +5,7 @@
   angular
     .module('svgv.views.SVGViewer', [
       'svgv.components.Header',
+      'svgv.components.Canvas',
       'svgv.components.References'
     ]);
 

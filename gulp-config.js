@@ -59,9 +59,10 @@ module.exports = function gulpConfig() {
     },
     copy: {
       src: {
-        vendors: bowerFiles.dependencies,
+        assets: srcDir + 'assets/**/*',
         scripts: filesets.appJS,
-        styles: bowerFiles.css
+        styles: bowerFiles.css,
+        vendors: bowerFiles.dependencies
       },
       dest: {
         dev: {
