@@ -1,0 +1,21 @@
+{
+  "name": "svg-viewer",
+  "description": "A tool for non-developers to view SVG files in the browser context quickly.",
+  "author": "Mat Janson Blanchet <mat.jb@jansensan.net> (http://jansensan.net)",
+  "main": "index.js",
+  "dependencies": {
+    "angular": "~1.5.0",
+    "jquery": "~2.2.0",
+    "blueimp-load-image": "~2.1.0",
+    "normalize-css": "~3.0.3"
+  },
+  "devDependencies": {},
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "license": "MIT"
+}
