@@ -56,7 +56,7 @@
       resizeCanvasBackground();
       updateInputs();
 
-      // add loaded images
+      // add loaded image
       _canvas.empty();
       _canvas.append(svg);
 
@@ -93,8 +93,9 @@
 
     function resizeSVG() {
       var svg = $('#canvasDisplay > img');
-      svg.width(_dimensions.width);
-      svg.height(_dimensions.height);
+      svg.attr('preserveAspectRatio', 'none');
+      svg.attr('width', _dimensions.width);
+      svg.attr('height', _dimensions.height);
     }
 
     function updateInputs() {
