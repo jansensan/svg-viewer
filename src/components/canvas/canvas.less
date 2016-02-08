@@ -11,4 +11,44 @@
     margin: 0 auto;
     position: relative;
   }
+
+  .canvas-inputs {
+    padding-bottom: 16px;
+  }
+
+  .canvas-dimensions {
+    margin-right: 8px;
+  }
+
+  .icon-link {
+    position: relative;
+    top: 4px;
+    margin-right: 8px;
+    cursor: pointer;
+  }
+
+  .aspect-ratio-lock {
+    &.enabled {
+      opacity: 1;
+    }
+    &.disabled {
+      opacity: 0.333;
+    }
+  }
+
+  .labeled-input {
+    font-size: 12px;
+
+    label {
+      display: inline-block;
+      width: 16px
+    }
+    input {
+      width: 52px
+    }
+
+    &.canvas-dimensions {
+      display: inline;
+    }
+  }
 }
