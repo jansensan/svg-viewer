@@ -7,7 +7,8 @@
       'svgv.components.Header',
       'svgv.components.Canvas',
       'svgv.components.Loader',
-      'svgv.components.References'
+      'svgv.components.References',
+      'svgv.components.Footer'
     ]);
 
 })();
