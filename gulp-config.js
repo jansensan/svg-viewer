@@ -55,7 +55,7 @@ module.exports = function gulpConfig() {
     },
     less: {
       src: srcDir + 'styles/' + fileNames.less,
-      watch: srcDir + 'styles/**/*.less',
+      watch: srcDir + '**/*.less',
       dest: devDir + 'styles/'
     },
     copy: {
