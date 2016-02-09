@@ -11,7 +11,8 @@
   /* @ngInject */
   function CanvasService(canvasModel) {
     // consts
-    var DEFAULT_SIZE = 320;
+    var DEFAULT_WIDTH = 640;
+    var DEFAULT_HEIGHT = 320;
 
     // vars
     var _canvas,
@@ -68,8 +69,8 @@
       _canvas.empty();
 
       // resize canvas
-      _canvasBackground.width(DEFAULT_SIZE);
-      _canvasBackground.height(DEFAULT_SIZE);
+      _canvasBackground.width(DEFAULT_WIDTH);
+      _canvasBackground.height(DEFAULT_HEIGHT);
 
       // clear inputs
       _widthInput.val('');
