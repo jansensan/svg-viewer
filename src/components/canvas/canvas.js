@@ -4,7 +4,9 @@
 
   angular
     .module('svgv.components.Canvas', [
+      'svgv.components.CanvasBGSelector',
       'svgv.components.IconLink',
+      'svgv.models.CanvasBGSelectorModel',
       'svgv.models.CanvasModel',
       'svgv.Templates'
     ])
@@ -25,6 +27,7 @@
   /* @ngInject */
   function CanvasController(
     $rootScope,
+    bgSelectorModel,
     canvasModel
   ) {
     // vars
@@ -33,6 +36,7 @@
     // public api
     var vm = this;
     vm.model = canvasModel;
+    vm.colorModel = bgSelectorModel;
 
     // auto activation
     activate();

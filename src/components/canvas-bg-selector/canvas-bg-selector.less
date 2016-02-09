@@ -1,0 +1,61 @@
+.svgv-canvas-bg-selector {
+  position: relative;
+  display: inline-block;
+
+  label {
+    position: relative;
+    font-size: 12px;
+    margin-right: 4px;
+  }
+
+  .selection-wrapper {
+    position: relative;
+    display: inline-block;
+  }
+
+  .bg {
+    display: inline-block;
+    position: relative;
+    top: 5px;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #fff;
+    .rounded(2px);
+    cursor: pointer;
+
+    &.grid {
+      background-image: url('../assets/images/canvas-grid.gif');
+    }
+    &.white {
+      background-image: none;
+      background: #fff;
+    }
+    &.black {
+      background-image: none;
+      background: #000;
+    }
+  }
+
+  .color-list {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    top: -8px;
+    left: -13px;
+    padding: 12px;
+    border: 1px solid #fff;
+    background: @grey;
+    .rounded(2px);
+
+    .bg {
+      top: 0px;
+      display: block;
+      clear: both;
+      margin-top: 8px;
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+}

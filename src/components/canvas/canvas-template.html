@@ -13,8 +13,13 @@
       <label for="heightInput">H:</label>
       <input id="heightInput" type="number">
     </div>
+    <svgv-canvas-bg-selector></svgv-canvas-bg-selector>
   </div>
-  <div id="canvasBackground" class="canvas-bg">
+  <div
+    id="canvasBackground"
+    class="canvas-bg"
+    ng-class="vm.colorModel.selectedColor"
+  >
     <div id="canvasDisplay"></div>
   </div>
 </section>
