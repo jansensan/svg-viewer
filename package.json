@@ -3,7 +3,6 @@
   "version": "0.0.1",
   "description": "A tool for non-developers to view SVG files in the browser context quickly.",
   "author": "Mat Janson Blanchet <mat.jb@jansensan.net> (http://jansensan.net)",
-  "main": "index.js",
   "homepage": "https://github.com/jansensan/svg-viewer",
   "repository": {
     "type": "git",

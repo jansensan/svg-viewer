@@ -2,7 +2,6 @@
   "name": "svg-viewer",
   "description": "A tool for non-developers to view SVG files in the browser context quickly.",
   "author": "Mat Janson Blanchet <mat.jb@jansensan.net> (http://jansensan.net)",
-  "main": "index.js",
   "dependencies": {
     "angular": "~1.5.0",
     "jquery": "~2.2.0",
