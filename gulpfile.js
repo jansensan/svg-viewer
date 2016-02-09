@@ -12,6 +12,8 @@ gulp.task('default', ['help']);
 
 gulp.task('build:dev', buildDev);
 gulp.task('dev', dev);
+gulp.task('build', build);
+gulp.task('build-and-serve', buildAndServe);
 
 // methods definitions
 function buildDev(done) {
@@ -24,7 +26,6 @@ function buildDev(done) {
     'copy:dev-assets',
     'copy:dev-sources',
     'less',
-    'less:watch',
     'build:svg-viewer',
     'clean:template-cache',
     done
@@ -34,6 +35,27 @@ function buildDev(done) {
 function dev() {
   runSequence(
     'build:dev',
+    'less:watch',
     'serve:dev'
+  );
+}
+
+function build(done) {
+  runSequence(
+    'clean:prod',
+    'build:dev',
+    'copy:assets',
+    'optimize:useref',
+    'optimize:post-js',
+    'optimize:post-css',
+    'clean:dev',
+    done
+  );
+}
+
+function buildAndServe() {
+  runSequence(
+    'build',
+    'serve'
   );
 }
