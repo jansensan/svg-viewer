@@ -6,6 +6,7 @@ gulp.task('copy:dev-sources', copyDevSources);
 gulp.task('copy:dev-vendor-js', copyDevVendorJS);
 gulp.task('copy:dev-vendor-css', copyDevVendorCSS);
 gulp.task('copy:dev-assets', copyDevAssets);
+gulp.task('copy:assets', copyProdAssets);
 
 // methods definitions
 function copyDevSources() {
@@ -36,6 +37,10 @@ function copyVendorCSS(dest) {
 
 function copyDevAssets() {
   return copyAssets(config.dest.dev.assets);
+}
+
+function copyProdAssets() {
+  return copyAssets(config.dest.prod.assets);
 }
 
 function copyAssets(dest) {

@@ -10,7 +10,7 @@ module.exports = function gulpConfig() {
     devDir = '.dev/',
     prodDir = 'www/',
     prodScriptsDir = prodDir + 'scripts/',
-    prodStylesDir = prodDir + 'assets/css/',
+    prodStylesDir = prodDir + 'styles/',
     localDomain = 'local.svg-viewer.com',
     localPort = 5678,
     localURL = 'http://' + localDomain + ':' + localPort;
@@ -45,6 +45,7 @@ module.exports = function gulpConfig() {
   var fileNames = {
     css: projectName + '.css',
     less: projectName + '.less',
+    app: projectName + '.js',
     templates: projectName + '-templates.js'
   };
 
@@ -141,6 +142,25 @@ module.exports = function gulpConfig() {
         }
       },
       localURL: localURL
+    },
+    optimize: {
+      src: devDir + 'index.html',
+      post: {
+        src: {
+          js: [
+            prodScriptsDir + fileNames.app,
+            prodScriptsDir + 'vendors.js'
+          ],
+          css: [
+            prodStylesDir + fileNames.css
+          ]
+        }
+      },
+      dest: {
+        prod: prodDir,
+        prodScriptsDir: prodScriptsDir, 
+        prodStylesDir: prodStylesDir
+      }
     }
   };
   return pipelines;
