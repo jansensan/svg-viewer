@@ -7,6 +7,7 @@
       'svgv.components.Header',
       'svgv.components.Canvas',
       'svgv.components.Loader',
+      'svgv.components.QuickTips',
       'svgv.components.References',
       'svgv.components.Footer'
     ]);
