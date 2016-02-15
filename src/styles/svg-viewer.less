@@ -1,0 +1,64 @@
+@import "vendor/elements";
+@import "common/variables";
+@import "../components/header/header";
+@import "../components/canvas-bg-selector/canvas-bg-selector";
+@import "../components/icon-link/icon-link";
+@import "../components/canvas/canvas";
+@import "../components/loader/loader";
+@import "../components/footer/footer";
+
+html, body {
+  position: relative;
+  background: @grey;
+  color: @lightestGrey;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #fff;
+}
+
+a {
+  color: @activeBlue;
+  text-decoration: underline;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+input[type="number"], input[type="text"] {
+  background: @grey;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 2px;
+  .rounded(2px);
+}
+
+button {
+  .rounded(16px);
+  background: @grey;
+  border: 1px solid #fff;
+  min-height: 32px;
+  min-width: 112px;
+  color: #fff;
+
+  &:hover {
+    background: @darkGrey;
+  }
+}
+
+.centered-content {
+  position: relative;
+  margin: 0 auto;
+  width: 640px;
+}
+
+.content-section {
+  padding-bottom: 32px;
+}
+
+.icon {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+}

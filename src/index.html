@@ -1,0 +1,36 @@
+<!doctype html>
+<html ng-app="svgv.views.SVGViewer">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF8">
+    <title>SVG Viewer</title>
+    <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon"/>
+    <meta property="og:title" content="SVG Viewer"/> 
+    <meta property="og:image" content="http://svg-viewer.com/assets/images/opengraph.png"/> 
+    <meta property="og:description" content="A tool for non-developers to view SVG files in the browser context quickly."/>
+    <!-- build:css styles/svg-viewer.css -->
+    <!-- bower:css-->
+    <!-- endbower-->
+    <!-- inject:css -->
+    <!-- endinject-->
+    <!-- endbuild -->
+  </head>
+  <body>
+    <svgv-header></svgv-header>
+    <svgv-canvas></svgv-canvas>
+    <svgv-loader></svgv-loader>
+    <svgv-quick-tips></svgv-quick-tips>
+    <svgv-about></svgv-about>
+    <svgv-references></svgv-references>
+    <svgv-footer></svgv-footer>
+    <!-- build:js scripts/vendors.js -->
+    <!-- bower:js-->
+    <!-- endbower-->
+    <!-- endbuild -->
+    <!-- build:js scripts/svg-viewer.js -->
+    <!-- inject:templates:js-->
+    <!-- endinject-->
+    <!-- inject:js-->
+    <!-- endinject-->
+    <!-- endbuild -->
+  </body>
+</html>
